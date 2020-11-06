@@ -1,5 +1,8 @@
 package com.seleniumeasy.stepdefinitions;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+
+import com.seleniumeasy.tasks.IngresarPractica;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -19,8 +22,7 @@ public class SumarPasosStepDefinitions {
 
   @Dado("^que (.*) ingresa a la practica de Simple Form Demo$")
   public void que_Felipe_ingresa_a_la_practica_de_Simple_Form_Demo(String nombreActor) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
+    theActorCalled(nombreActor).attemptsTo(IngresarPractica.deSimpleForm());
   }
 
   @Cuando("^el ingresa los numeros:$")
